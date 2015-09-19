@@ -87,5 +87,16 @@ If you use bash, go ahead and set up your ~/.bashrc with the following::
 
 Other shells, adapt as necessary.
 
+
+Set up pbuilder
+---------------
+
+``pbuilder`` is a tool that lets you build out packages in a pristine environment, unpolluted by all that crap that you've installed on your OS for your day-to-day.
+It also supports cross-version builds (e.g. building for precise when you're on trusty).
+To set it up, you need to download all the necessary packages and somesuch::
+
+    $ pbuilder-dist <release> create
+
+
 .. _launchpad: https://launchpad.net/
 .. _gpg: https://www.gnupg.org/
