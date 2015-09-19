@@ -1,5 +1,5 @@
-Creating an Ubuntu Package from a Git
-=====================================
+Creating an Ubuntu package for a C++ project managed by git
+===========================================================
 
 So you've got a C++ library that is under git version control, and you'd like to create an Ubuntu package for it so that other people out there in the big wide world can easily install your stuff.
 Piece of cake, right?
@@ -17,5 +17,6 @@ Until then, though, I hope it's helpful.
     :maxdepth: 2
 
     assumptions
+    ubuntu-packaging-setup
 
 .. _launchpad: https://launchpad.net/
