@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Creating a Debian Package from a Git Project documentation build configuration file, created by
+# Creating a Ubunutu Package from a Git Project documentation build configuration file, created by
 # sphinx-quickstart on Fri Sep 18 18:25:28 2015.
 #
 # This file is execfile()d with the current directory set to its
@@ -46,7 +46,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Creating a Debian Package from a Git Project'
+project = u'Creating an Ubuntu Package from a Git Project'
 copyright = u'2015, Pete Gadomski'
 author = u'Pete Gadomski'
 
@@ -200,7 +200,7 @@ html_static_path = ['_static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'CreatingaDebianPackagefromaGitProjectdoc'
+htmlhelp_basename = 'CreatinganUbuntuPackagefromaGitProjectdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -222,7 +222,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'CreatingaDebianPackagefromaGitProject.tex', u'Creating a Debian Package from a Git Project Documentation',
+  (master_doc, 'CreatinganUbuntuPackagefromaGitProject.tex', u'Creating an Ubuntu Package from a Git Project Documentation',
    u'Pete Gadomski', 'manual'),
 ]
 
@@ -252,7 +252,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'creatingadebianpackagefromagitproject', u'Creating a Debian Package from a Git Project Documentation',
+    (master_doc, 'creatinganubuntupackagefromagitproject', u'Creating a Ubuntu Package from a Git Project Documentation',
      [author], 1)
 ]
 
@@ -266,8 +266,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'CreatingaDebianPackagefromaGitProject', u'Creating a Debian Package from a Git Project Documentation',
-   author, 'CreatingaDebianPackagefromaGitProject', 'One line description of project.',
+  (master_doc, 'CreatinganUbuntuPackagefromaGitProject', u'Creating an Ubuntu Package from a Git Project Documentation',
+   author, 'CreatinganUbuntuPackagefromaGitProject', 'One line description of project.',
    'Miscellaneous'),
 ]
 
