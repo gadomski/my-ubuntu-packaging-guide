@@ -9,6 +9,15 @@ These instructions are derived from those at:
 - http://packaging.ubuntu.com/html/getting-set-up.html
 
 
+Download necessary packages
+---------------------------
+
+First things first, download the packages we need to do this business::
+
+    $ sudo apt-get update
+    $ sudo apt-get install packaging-dev git-buildpackage
+
+
 Create a Launchpad account
 --------------------------
 
@@ -19,11 +28,7 @@ Create and upload your gpg key
 ------------------------------
 
 Launchpad requires that all packages are signed with a `gpg`_ key.
-To create a key, first install the GNU privacy guard::
-
-    $ sudo apt-get install gnupg
-
-Then, create your key::
+First, create your key::
 
     $ gpg --gen-key
 
@@ -53,6 +58,45 @@ To decrypt that portion of an email message, I copy-pasted the GPG portion of th
 
 This should spit out the contents of the message, which you can then use to navigate back to the Launchpad confirmation link and join up your gpg key with your Launchpad account.
 Whew.
+
+
+Create and upload your ssh key
+------------------------------
+
+We will use ssh to upload files to Launchpad.
+You should probably already have an ssh key on your machine, but if you don't, run::
+
+    $ ssh-keygen
+
+Copy your public key.
+I usually just ``cat`` it out to my terminal and copy it from there::
+
+    $ cat ~/.ssh/id_rsa.pub
+
+Go to https://launchpad.net/~/+editsshkeys and paste in that public key.
+
+
+Configure your shell
+--------------------
+
+The Debian packaging scripts occasionally need to know who you are.
+If you use bash, go ahead and set up your ~/.bashrc with the following::
+
+    export DEBFULLNAME="Pete Gadomski"
+    export DEBEMAIL=pete.gadomski@gmail.com
+
+Other shells, adapt as necessary.
+
+
+Set up pbuilder
+---------------
+
+``pbuilder`` is a tool that lets you build out packages in a pristine environment, unpolluted by all that crap that you've installed on your OS for your day-to-day.
+It also supports cross-version builds (e.g. building for precise when you're on trusty).
+To set it up, you need to download all the necessary packages and somesuch::
+
+    $ pbuilder-dist <release> create
+
 
 .. _launchpad: https://launchpad.net/
 .. _gpg: https://www.gnupg.org/
